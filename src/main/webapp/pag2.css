@@ -1,0 +1,178 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.img_nome {
+  margin: 10px 700px 30px;
+
+}
+
+
+/* texto */
+.saldo {
+  text-align: center;
+  padding: 0px 550px;
+  color: #CE9F41;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+
+}
+
+
+
+/* div do valor */
+
+
+.value {
+ 
+  margin-left: 450px;
+  border: 5px solid #CE9F41;
+  border-radius: 170px;
+  width: 600px; /* Reduzi a largura para ajustar melhor ao layout */
+  height: 200px; /* Reduzi a altura para ajustar melhor ao layout */
+  color:#CE9F41;
+  padding: 10px; /* Reduzi o espaçamento interno para melhor formatação */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px; /* Reduzi o tamanho da fonte para melhor ajuste */
+  cursor: pointer;
+  text-align: center;
+
+}
+
+
+.blue {
+  display: flex;
+  margin-top: 70px;
+  background-color: #00003C;
+  height: 350px;
+  width: 100%;
+  align-items: center;
+  /* Alinhar verticalmente no centro */
+  justify-content: space-around;
+  /* Espaço igual entre os elementos */
+}
+
+/* .saque,
+.deposito {
+  display: flex;
+  flex-direction: column;/* Para empilhar os elementos verticalmente */
+  /* align-items: center; */
+  /* justify-content: center; Alinhar horizontalmente no centro */
+  /* flex-direction: column; */
+  /* text-align: center; Centralizar o texto */
+ 
+
+
+
+.btn {
+  border: 2px solid black;
+  border-radius: 35px 35px 35px 35px;
+  border-color: #CE9F41;
+  background-color: #00003C;
+  width: 200px;
+  height: 60px;
+  color: white;
+  padding: 14px 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+ margin-left: 100px;
+ margin-bottom: 100px;
+
+}
+
+.btn:hover {
+  background-color: #CE9F41;
+}
+
+
+/* menu */
+.container {
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 80px;
+  margin-left: 150px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 70px;
+  height: 6px;
+  background-color: #CE9F41;
+  margin: 6px 0 0px 30px;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.menu-options {
+  position: absolute;
+  top: 150px; /* Ajuste a posição vertical conforme necessário */
+  right: 10px; /* Ajuste a posição horizontal conforme necessário */
+  background-color:#00003C;
+  padding: 10px;
+  border-radius: 5px;
+  width: 0; /* Inicialmente, a largura é zero (fechada) */
+  height: 50%; /* A altura ocupa metade da altura da página */
+  overflow-x: hidden;
+  transition: 0.5s; /* Adicione uma transição suave para animação */
+  z-index: 1; /* Certifique-se de que a barra do menu esteja acima do conteúdo */
+  display: none;
+}
+
+.container.change .menu-options {
+  width: 15%; /* Define a largura desejada ao abrir (100% da página) */
+  height: 30%;
+}
+
+.txt_menu{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;  
+  font-size: 20px;
+}
+
+
+.menu-options ul {
+  list-style: none;
+  padding: 0;
+  text-align: center; /* Alinhe o texto ao centro horizontalmente */
+}
+
+.menu-options ul li {
+  margin-bottom: 10px;
+}
+
+.menu-options ul li a {
+  display: block;
+  color: #CE9F41;
+
+  padding: 10px; /* Adicione um espaçamento interno para melhor formatação */
+}
+
+.menu-options ul li a:hover {
+  background-color: #00003C;
+  color: white;
+}
+
+.container.change .menu-options {
+  display: block; /* Mostrar o menu quando o ícone do menu é clicado */
+}
