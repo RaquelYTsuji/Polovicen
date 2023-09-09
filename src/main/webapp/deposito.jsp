@@ -32,7 +32,7 @@
 
 
     <p class="saldo"><b>Depósito:</b></p>
-    <div class="blue">
+    <form action="gravarDeposito.jsp" method="post" class="blue">
 
        <label for="value" class="txt_cad" >Digite o valor que deseja depositar:</label>
        <input class="value" id="dinheiro" name="dinheiro" type="text" placeholder="R$: 000,00" style="font-size: 70px;">
@@ -45,7 +45,7 @@
 
         <a href="pag2.jsp" class="visu" >Visualizar o saldo atual</a>
 
-    </div>
+    </form>
     
 
     <script>
