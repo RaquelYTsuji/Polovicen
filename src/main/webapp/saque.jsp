@@ -1,5 +1,7 @@
+<%@page import="java.util.Set"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page errorPage="erro.jsp" %>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -32,7 +34,7 @@
     </div>
 
     <p class="saldo"><b>Saque:</b></p>
-    <div class="blue">
+    <form action="gravarSaque.jsp" method="post" class="blue">
 
        <label for="value" class="txt_cad" >Digite o valor que deseja sacar:</label>
        <input class="value" id="dinheiro" name="dinheiro" type="text" placeholder="R$: 000,00" style="font-size: 70px;">
@@ -45,8 +47,7 @@
 
         <a href="pag2.jsp" class="visu" >Visualizar o saldo atual</a>
 
-    </div>
-    
+    </form>
 
     <script>
         function myFunction(x) {
