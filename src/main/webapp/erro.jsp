@@ -26,9 +26,9 @@
 		<br>
 	    <p class="texto"><b>A operação não pôde ser concluída</b></p>
 	    
-	    <br>
+	    <br><br>
 	    <p class="texto">
-	    	<b>Detalhes: </b>
+	    	<b>Detalhes: </b> <br>
 	    	<% out.print("<b>" + exception + "</b>"); %>
 	    </p>
 	    
