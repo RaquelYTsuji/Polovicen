@@ -12,16 +12,24 @@
     	String valor = request.getParameter("dinheiro");
 		
 		if (valor!=null && !valor.isEmpty()) {
-			session.setAttribute("deposito", valor);
 			
+			session.setAttribute("deposito", valor);
+				
 			String depositoString = (String) session.getAttribute("deposito");
 			Double deposito = Double.parseDouble(depositoString);
+				
+			if (deposito >= 0) {
+				Double saldo = (Double) session.getAttribute("dinheiro");
+				
+				Double dinheiro = saldo + deposito;
+				session.setAttribute("dinheiro", dinheiro);
+				
+				response.sendRedirect("pag2.jsp");
+			} else {
+				response.sendRedirect("pag2.jsp");
+			}
 			
-			Double saldo = (Double) session.getAttribute("dinheiro");
-			
-			Double dinheiro = saldo + deposito;
-			session.setAttribute("dinheiro", dinheiro);
-			
+		} else {
 			response.sendRedirect("pag2.jsp");
 		}
 	%>
