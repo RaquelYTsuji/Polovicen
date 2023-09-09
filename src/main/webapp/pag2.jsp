@@ -22,9 +22,9 @@
         <div class="bar3"></div>
         <div class="menu-options">
             <ul>
-                <li class="txt_menu"><a href="saque.html">Saque</a></li>
-                <li class="txt_menu"><a href="deposito.html">Depósito</a></li>
-                <li class="txt_menu"><a href="index.html">Sair</a></li>
+                <li class="txt_menu"><a href="saque.jsp">Saque</a></li>
+                <li class="txt_menu"><a href="deposito.jsp">Depósito</a></li>
+                <li class="txt_menu"><a href="index.jsp">Sair</a></li>
             </ul>
         </div>
     </div>
@@ -43,11 +43,11 @@
     <div class="blue">
         <div class="saque">
             <img src="saque.png" height="350px" width="150px" style="padding-top: 200px;">
-            <a href="saque.html"><button class="btn" style="margin-bottom: 150px;" >Realizar saque</button></a>
+            <a href="saque.jsp"><button class="btn" style="margin-bottom: 150px;" >Realizar saque</button></a>
         </div>
         <div class="deposito">
             <img class="deposito img" src="po.deposito.png" height="530px" width="170px" style="padding-top: 350px;">
-            <a href="deposito.html"><button class="btn" style="margin-bottom: 350px;" >Realizar depósito</button></a>
+            <a href="deposito.jsp"><button class="btn" style="margin-bottom: 350px;" >Realizar depósito</button></a>
         </div>
     </div>
     

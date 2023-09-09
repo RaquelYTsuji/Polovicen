@@ -36,7 +36,7 @@
 
            
             <br><br>
-            <a href="pag2.html"><button class="btn">Entrar</button></a>
+            <a href="pag2.jsp"><button class="btn">Entrar</button></a>
 
 
         </div>

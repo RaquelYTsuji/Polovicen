@@ -32,7 +32,7 @@
 	    </p>
 	    
 	    <br><br><br><br>
-	    <a href="pag2.html" class="visu" >Voltar para a página principal</a>
+	    <a href="pag2.jsp" class="visu" >Voltar para a página principal</a>
 	    
 	 </div>
 </body>

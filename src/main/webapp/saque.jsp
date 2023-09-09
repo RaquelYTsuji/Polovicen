@@ -24,9 +24,9 @@
         <div class="bar3"></div>
         <div class="menu-options">
             <ul>
-                <li class="txt_menu"><a href="deposito.html">Depósito</a></li>
-                <li class="txt_menu"><a href="pag2.html">Saldo</a></li>
-                <li class="txt_menu"><a href="index.html">Sair</a></li>
+                <li class="txt_menu"><a href="deposito.jsp">Depósito</a></li>
+                <li class="txt_menu"><a href="pag2.jsp">Saldo</a></li>
+                <li class="txt_menu"><a href="index.jsp">Sair</a></li>
             </ul>
         </div>
     </div>
@@ -43,7 +43,7 @@
 
         <button class="btn" onclick="saque()">Realizar saque</button>
 
-        <a href="pag2.html" class="visu" >Visualizar o saldo atual</a>
+        <a href="pag2.jsp" class="visu" >Visualizar o saldo atual</a>
 
     </div>
     
