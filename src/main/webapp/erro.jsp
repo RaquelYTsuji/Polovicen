@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page isErrorPage="true" %>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -28,7 +29,7 @@
 	    <br>
 	    <p class="texto">
 	    	<b>Detalhes: </b>
-	    	
+	    	<% out.print("<b>" + exception + "</b>"); %>
 	    </p>
 	    
 	    <br><br><br><br>
