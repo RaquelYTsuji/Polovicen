@@ -17,11 +17,23 @@
 			String saqueString = (String) session.getAttribute("saque");
 			Double saque = Double.parseDouble(saqueString);
 			
-			Double saldo = (Double) session.getAttribute("dinheiro");
+			if (saque >= 0) {
+				Double saldo = (Double) session.getAttribute("dinheiro");
+				
+				Double dinheiro = saldo - saque;
+				
+				if (dinheiro >= 0){
+					session.setAttribute("dinheiro", dinheiro);
+					response.sendRedirect("pag2.jsp");
+				} else {
+					response.sendRedirect("pag2.jsp");
+				}
+				
+			} else {
+				response.sendRedirect("erro.jsp");
+			}
 			
-			Double dinheiro = saldo - saque;
-			session.setAttribute("dinheiro", dinheiro);
-			
+		} else {
 			response.sendRedirect("pag2.jsp");
 		}
 	%>
