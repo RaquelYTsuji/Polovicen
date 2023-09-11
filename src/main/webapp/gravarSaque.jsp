@@ -9,7 +9,7 @@
 </head>
 <body>
 	<% 
-    	String valor = request.getParameter("dinheiro");
+    	String valor = request.getParameter("saque");
 		
 		if (valor!=null && !valor.isEmpty()) {
 			session.setAttribute("saque", valor);
@@ -18,12 +18,12 @@
 			Double saque = Double.parseDouble(saqueString);
 			
 			if (saque >= 0) {
-				Double saldo = (Double) session.getAttribute("dinheiro");
+				Double saldo = (Double) session.getAttribute("saque");
 				
 				Double dinheiro = saldo - saque;
 				
 				if (dinheiro >= 0){
-					session.setAttribute("dinheiro", dinheiro);
+					session.setAttribute("saque", dinheiro);
 					response.sendRedirect("pag2.jsp");
 				} else {
 					response.sendRedirect("pag2.jsp");

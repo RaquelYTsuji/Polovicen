@@ -37,7 +37,7 @@
     <form action="gravarSaque.jsp" method="post" class="blue">
 
        <label for="value" class="txt_cad" >Digite o valor que deseja sacar:</label>
-       <input class="value" id="dinheiro" name="dinheiro" type="text" placeholder="R$: 000,00" style="font-size: 70px;">
+       <input class="value" id="saque" name="saque" type="text" placeholder="R$: 000,00" style="font-size: 70px;">
    
        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
        <br><br><br><br>
