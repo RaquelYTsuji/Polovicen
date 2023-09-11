@@ -22,21 +22,22 @@
         <div class="bar3"></div>
         <div class="menu-options">
             <ul>
+             <!--  <li class="txt_menu"><a href="conta.jsp">Conta</a></li> -->
                 <li class="txt_menu"><a href="saque.jsp">Saque</a></li>
                 <li class="txt_menu"><a href="deposito.jsp">Depósito</a></li>
-                <li class="txt_menu"><a href="index.jsp">Sair</a></li>
+                <li class="txt_menu"><a href="login.jsp">Sair</a></li>
             </ul>
         </div>
     </div>
-    
+
 
     <p class="saldo"><b>Saldo Atual:</b></p>
-    <input class="value" id="saldo" name="saldo" type="text" placeholder="R$: 000,00">
+    <input class="value" id="saldo" name="saldo" type="text" value ="<%=session.getAttribute("saldo")%>"/>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
-    
+
 
     <div class="blue">
         <div class="saque">
@@ -48,15 +49,14 @@
             <a href="deposito.jsp"><button class="btn" style="margin-bottom: 350px;" >Realizar depósito</button></a>
         </div>
     </div>
-    
 
-    
+
+
 
     <script>
         function myFunction(x) {
             x.classList.toggle("change");
         }
-
         $(document).ready(function () {
             $('#dinheiro').mask('R$: #.##0,00', { reverse: true });
         });

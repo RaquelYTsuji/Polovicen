@@ -21,24 +21,21 @@
 
     <div class="div">
 
-        <form action="gravarUsuario.jsp" method="post" class="div login">
+        <div class="div login">
             <h1 class="txt_login">Login</h1>
             <br>
             <br>
 
-            <label for="nm" class="txt_cad" >Nome:</label>
-            <input type="text"  id="nm" style="background-color: #00003C; color: white;">
-           
-            <br><br><br><br>
-            <br><br><br><br>
-            <label for="password" class="txt_cad">Senha:</label>
-            <input type="password" id="password" style="background-color: #00003C; color: white;">
+            <form action = "Login.jsp" method = "post" class="txt_cad">
+	            Nome:<input type="text" name="usuario" id="usuario" style="background-color: #00003C; color: white;">
+	            <br><br><br><br>
+	            <br><br><br><br>
+	            Senha:<input type="password" name="password" id="password" style="background-color: #00003C; color: white;">
+	            <br><br>
+	            <a href="pag2.html"><button class="btn">Entrar</button></a>
+	         </form>
 
-           
-            <br><br>
-            <a href="pag2.jsp"><button class="btn">Entrar</button></a>
-
-        </form>
+        </div>
         <div class="div frase">
 
             <div class="p_cima">
@@ -47,7 +44,7 @@
 
             <div class="p_baixo">
 
-                <h3 class="txt_bank" > O seu banco de confiança a alguns cliques de você<span style="color: #CE9F41" >.</span></h2>
+                <h3 class="txt_bank" > O seu banco de confiança a alguns cliques de você<span style="color: #CE9F41" >.</span></h3>
                  
 
             </div>
