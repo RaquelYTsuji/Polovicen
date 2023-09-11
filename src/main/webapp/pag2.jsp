@@ -32,7 +32,7 @@
         </div>
     </div>
 	
-	<h1 class="saudacao"><b>Olá, <%=session.getAttribute("nome")%></b></h1>
+	<p class="saudacao"><b>Olá, <%=session.getAttribute("nome")%></b></p>
 	
     <p class="saldo"><b>Saldo Atual:</b></p>
     <input class="value" id="saldo" name="saldo" type="text" value ="<%=session.getAttribute("saldo")%>"/>
