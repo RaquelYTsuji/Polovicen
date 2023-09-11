@@ -10,7 +10,7 @@
     <link rel="icon" type="imagem/png" href="po.polovicen.png">
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect"s href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
 </head>
@@ -26,17 +26,13 @@
             <br>
             <br>
 
-            <label for="nm" class="txt_cad" >Nome:</label>
-            <input type="text"  id="nm" style="background-color: #00003C; color: white;">
-           
+            <form action = "Login.jsp" method = "post" class="txt_cad">
+            Nome:<input type="text" name="usuario" id="usuario" style="background-color: #00003C; color: white;">
             <br><br><br><br>
             <br><br><br><br>
-            <label for="password" class="txt_cad">Senha:</label>
-            <input type="password" id="password" style="background-color: #00003C; color: white;">
-
-           
+            Senha:<input type="password" name="password" id="password" style="background-color: #00003C; color: white;">
             <br><br>
-            <a href="pag2.jsp"><button class="btn">Entrar</button></a>
+            <a href="pag2.html"><button class="btn">Entrar</button></a>
 
 
         </div>
