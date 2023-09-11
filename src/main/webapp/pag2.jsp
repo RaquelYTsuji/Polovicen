@@ -31,11 +31,9 @@
     
 
     <p class="saldo"><b>Saldo Atual:</b></p>
-    <input class="value" id="dinheiro" name="dinheiro" type="text" placeholder="R$: 000,00">
-
+    <input class="value" id="saldo" name="saldo" type="text" placeholder="R$: 000,00">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
 
     

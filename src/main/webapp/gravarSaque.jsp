@@ -30,7 +30,7 @@
 				}
 				
 			} else {
-				response.sendRedirect("erro.jsp");
+				response.sendRedirect("pag2.jsp");
 			}
 			
 		} else {

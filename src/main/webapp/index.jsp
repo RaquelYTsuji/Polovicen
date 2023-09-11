@@ -21,7 +21,7 @@
 
     <div class="div">
 
-        <div class="div login">
+        <form action="gravarUsuario.jsp" method="post" class="div login">
             <h1 class="txt_login">Login</h1>
             <br>
             <br>
@@ -38,8 +38,7 @@
             <br><br>
             <a href="pag2.jsp"><button class="btn">Entrar</button></a>
 
-
-        </div>
+        </form>
         <div class="div frase">
 
             <div class="p_cima">
