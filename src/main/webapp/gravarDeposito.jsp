@@ -9,20 +9,19 @@
 </head>
 <body>
 	<% 
-    	String valor = request.getParameter("dinheiro");
+    	String valor = request.getParameter("deposito");
 		
 		if (valor!=null && !valor.isEmpty()) {
-			
 			session.setAttribute("deposito", valor);
 				
 			String depositoString = (String) session.getAttribute("deposito");
 			Double deposito = Double.parseDouble(depositoString);
 				
 			if (deposito >= 0) {
-				Double saldo = (Double) session.getAttribute("dinheiro");
+				Double saldo = (Double) session.getAttribute("saldo");
 				
-				Double dinheiro = saldo + deposito;
-				session.setAttribute("dinheiro", dinheiro);
+				Double conta = saldo + deposito;
+				session.setAttribute("saldo", conta);
 				
 				response.sendRedirect("pag2.jsp");
 			} else {

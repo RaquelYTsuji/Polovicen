@@ -18,12 +18,12 @@
 			Double saque = Double.parseDouble(saqueString);
 			
 			if (saque >= 0) {
-				Double saldo = (Double) session.getAttribute("saque");
+				Double saldo = (Double) session.getAttribute("saldo");
 				
-				Double dinheiro = saldo - saque;
+				Double conta = saldo - saque;
 				
-				if (dinheiro >= 0){
-					session.setAttribute("saque", dinheiro);
+				if (conta >= 0){
+					session.setAttribute("saldo", conta);
 					response.sendRedirect("pag2.jsp");
 				} else {
 					response.sendRedirect("pag2.jsp");
