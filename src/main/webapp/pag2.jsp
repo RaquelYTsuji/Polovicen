@@ -22,15 +22,18 @@
         <div class="bar3"></div>
         <div class="menu-options">
             <ul>
-             <!--  <li class="txt_menu"><a href="conta.jsp">Conta</a></li> -->
+             	<!--  <li class="txt_menu"><a href="conta.jsp">Conta</a></li> -->
+             	<li class="txt_menu"><a href="#"><%=session.getAttribute("nome")%></a></li>
+             	<hr><br>
                 <li class="txt_menu"><a href="saque.jsp">Saque</a></li>
                 <li class="txt_menu"><a href="deposito.jsp">Depósito</a></li>
                 <li class="txt_menu"><a href="login.jsp">Sair</a></li>
             </ul>
         </div>
     </div>
-
-
+	
+	<h1 class="saudacao"><b>Olá, <%=session.getAttribute("nome")%></b></h1>
+	
     <p class="saldo"><b>Saldo Atual:</b></p>
     <input class="value" id="saldo" name="saldo" type="text" value ="<%=session.getAttribute("saldo")%>"/>
 

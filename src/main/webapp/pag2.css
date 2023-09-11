@@ -10,6 +10,14 @@
 
 }
 
+.saudacao {
+  text-align: center;
+  padding: 0px 550px;
+  color: #CE9F41;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  
+}
 
 /* texto */
 .saldo {
@@ -20,7 +28,6 @@
   font-size: 40px;
 
 }
-
 
 
 /* div do valor */
