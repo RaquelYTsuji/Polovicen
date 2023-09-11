@@ -8,19 +8,21 @@
 </head>
 <body>
 	<%
-		String usuario = request.getParameter("usuario");
+		String nome = request.getParameter("nm");
 		String password = request.getParameter("password");
 		
 		Double saldo = 0.0;
 		Double saque = 0.0;
 		Double deposito = 0.0;
 		
-		if (usuario!=null && !usuario.isEmpty() && password!=null && !password.isEmpty()) {
-			session.setAttribute("usuario", usuario);
+		if (nome!=null && !nome.isEmpty() && password!=null && !password.isEmpty()) {
+			session.setAttribute("nome", nome);
 			session.setAttribute("password", password);
 			session.setAttribute("saldo", saldo);
 			session.setAttribute("saque", saque);
 			session.setAttribute("deposito", deposito);
+			
+			response.sendRedirect("pag2.jsp");
 		} else {
 			response.sendRedirect("index.jsp");
 		}

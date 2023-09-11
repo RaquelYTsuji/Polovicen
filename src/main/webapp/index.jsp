@@ -17,25 +17,24 @@
 
     <div class="div">
 
-        <div class="div login">
+        <form action = "login.jsp" method = "post" class="div login">
             <h1 class="txt_login">Login</h1>
             <br>
             <br>
             
-            <form action = "login.jsp" method = "post">
-	            <label for="usuario" class="txt_cad">Nome:</label>
-	            <input type="text"  id="usuario" name="usuario" style="background-color: #00003C; color: white;">
-	           
-	            <br><br><br><br>
-	            <br><br><br><br>
-	            <label for="password" class="txt_cad">Senha:</label>
-	            <input type="password" id="password" name="password" style="background-color: #00003C; color: white;">
-	           
-	            <br><br>
-	            <a href="pag2.jsp"><button class="btn">Entrar</button></a>
-	         </form>
+            <label for="nm" class="txt_cad" >Nome:</label>
+            <input type="text" id="nm" name="nm" style="background-color: #00003C; color: white;">
+           
+            <br><br><br><br>
+            <br><br><br><br>
+            <label for="password" class="txt_cad">Senha:</label>
+            <input type="password" id="password" name="password" style="background-color: #00003C; color: white;">
 
-        </div>
+           
+            <br><br>
+            <a href="pag2.html"><button class="btn">Entrar</button></a>
+            
+        </form>
         <div class="div frase">
 
             <div class="p_cima">
