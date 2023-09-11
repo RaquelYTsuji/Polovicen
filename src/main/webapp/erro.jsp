@@ -23,7 +23,7 @@
 		
 		<h1 class="txt_erro">Erro</h1>
 		
-		<br>
+		<br><br>
 	    <p class="texto"><b>A operação não pôde ser concluída</b></p>
 	    
 	    <br><br>
