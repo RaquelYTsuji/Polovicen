@@ -35,7 +35,7 @@
 
 .value {
  
-  margin-left: 450px;
+  margin-left: 650px;
   border: 5px solid #CE9F41;
   border-radius: 170px;
   width: 600px; /* Reduzi a largura para ajustar melhor ao layout */
@@ -103,7 +103,7 @@
   display: inline-block;
   cursor: pointer;
   margin-bottom: 80px;
-  margin-left: 150px;
+  margin-left: 650px;
 }
 
 .bar1,

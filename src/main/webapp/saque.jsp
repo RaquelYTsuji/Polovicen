@@ -26,6 +26,8 @@
         <div class="bar3"></div>
         <div class="menu-options">
             <ul>
+            	<li class="txt_menu"><a href="#"><%=session.getAttribute("nome")%></a></li>
+            	<hr><br>
                 <li class="txt_menu"><a href="deposito.jsp">Depósito</a></li>
                 <li class="txt_menu"><a href="pag2.jsp">Saldo</a></li>
                 <li class="txt_menu"><a href="index.jsp">Sair</a></li>
@@ -37,7 +39,7 @@
     <form action="gravarSaque.jsp" method="post" class="blue">
 
        <label for="value" class="txt_cad" >Digite o valor que deseja sacar:</label>
-       <input class="value" id="saque" name="saque" type="text" placeholder="R$: 000,00" style="font-size: 70px;">
+       <input class="value" id="saque" name="saque" type="text" placeholder="R$: 000,00" style="font-size: 70px">
    
        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
        <br><br><br><br>
@@ -54,11 +56,11 @@
         }
 
         $(document).ready(function () {
-            $('#dinheiro').mask('R$: ##.##0,00', { reverse: true });
+            $('#saque').mask('R$: ##.##0,00', { reverse: true });
         });
 
         function saque(){
-            var saque = document.getElementById('dinheiro').value;
+            var saque = document.getElementById('saque').value;
             alert('Você realizou um saque no valor de: ' + saque );
         }
     </script>

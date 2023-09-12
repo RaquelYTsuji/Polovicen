@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polovičen</title>
     <link rel="icon" type="imagem/png" href="po.polovicen.png">
-    <link rel="stylesheet" href="saque.css">
+    <link rel="stylesheet" href="deposito.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
@@ -23,6 +23,8 @@
         <div class="bar3"></div>
         <div class="menu-options">
             <ul>
+            	<li class="txt_menu"><a href="#"><%=session.getAttribute("nome")%></a></li>
+            	<hr><br>
                 <li class="txt_menu"><a href="saque.jsp">Saque</a></li>
                 <li class="txt_menu"><a href="pag2.jsp">Saldo</a></li>
                 <li class="txt_menu"><a href="index.jsp">Sair</a></li>
@@ -40,7 +42,7 @@
        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
        <br><br><br><br>
 
-        <button class="btn" onclick="saque()">Realizar depósito</button>
+        <button class="btn" onclick="deposito()">Realizar depósito</button>
 
         <a href="pag2.jsp" class="visu" >Visualizar o saldo atual</a>
 
@@ -53,12 +55,12 @@
         }
 
         $(document).ready(function () {
-            $('#dinheiro').mask('R$: ##.##0,00', { reverse: true });
+            $('#deposito').mask('R$: ##.##0,00', { reverse: true });
         });
 
-        function saque(){
-            var dep = document.getElementById('dinheiro').value;
-            alert('Você realizou um saque no valor de: ' + dep );
+        function deposito(){
+            var dep = document.getElementById('deposito').value;
+            alert('Você realizou um deposito no valor de: ' + dep );
         }
     </script>
 </body>

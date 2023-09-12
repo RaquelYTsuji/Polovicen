@@ -25,8 +25,6 @@
             <label for="nm" class="txt_cad" >Nome:</label>
             <input type="text" id="nm" name="nm" style="background-color: #00003C; color: white;">
            
-            <br><br><br><br>
-            <br><br><br><br>
             <label for="password" class="txt_cad">Senha:</label>
             <input type="password" id="password" name="password" style="background-color: #00003C; color: white;">
 

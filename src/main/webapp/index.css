@@ -19,7 +19,7 @@
     background-color: #00003C;
     width: 600px;
     height: 600px;
-    margin-left: 100px;
+    margin-left: 300px;
     border-radius: 10px 20px;
     display: flex; /* Usar flex para o layout */
     flex-direction: column; /* Coluna para alinhar verticalmente */
@@ -38,12 +38,14 @@
 #password {
     margin-left:2px;
     margin-right: 2px;
+    margin-bottom: 80px;
     width: 97%; /* Ocupar a largura total da div login */
     background-color: transparent; /* Fundo transparente */
     border: none; /* Sem borda */
     border-bottom: 2px solid white; /* Linha branca na parte inferior */
     color: white; /* Texto branco */
-    font-size: 18px; /* Tamanho da fonte */
+    font-size: 20px; /* Tamanho da fonte */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .btn{
@@ -68,7 +70,7 @@
 
 .img_nome{
     width: auto;
-    margin:10px 400px 30px;
+    margin:10px 600px 30px;
 
 }
 

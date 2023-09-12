@@ -33,7 +33,7 @@
     border-radius: 170px 170px 170px 170px;
     width: 700px;
     height: 180px;
-    color: white;
+    color: #CE9F41;
     padding: 14px 28px;
     font-family: 'Montserrat', sans-serif;
     font-size: 100px;
@@ -74,7 +74,7 @@
     padding-bottom: 50px;
 }
 
-#dinheiro {
+#deposito {
     margin-left:2px;
     margin-right: 2px;
     width: 60%; /* Ocupar a largura total da div login */
@@ -100,7 +100,7 @@
     display: inline-block;
     cursor: pointer;
     margin-bottom: 80px;
-    margin-left:150px;
+    margin-left:650px;
   }
   
   .bar1, .bar2, .bar3 {

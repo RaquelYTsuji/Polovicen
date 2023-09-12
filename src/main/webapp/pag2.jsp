@@ -35,7 +35,7 @@
 	<p class="saudacao"><b>Olá, <%=session.getAttribute("nome")%></b></p>
 	
     <p class="saldo"><b>Saldo Atual:</b></p>
-    <input class="value" id="saldo" name="saldo" type="text" value ="<%=session.getAttribute("saldo")%>"/>
+    <input class="value" id="saldo" name="saldo" type="text" value ="R$: <%=session.getAttribute("saldo")%>"/>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
