@@ -11,26 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body style="margin-bottom: 150px;">
 
-    <img class="img_nome" src="polovicen.png" height="130px" width="350px" style="margin-left: 20px;">
-
- 
-    <div class="container" onclick="myFunction(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-        <div class="menu-options">
-            <ul>
-            	<li class="txt_menu"><a href="#"><%=session.getAttribute("nome")%></a></li>
-            	<hr><br>
-                <li class="txt_menu"><a href="saque.jsp">Saque</a></li>
-                <li class="txt_menu"><a href="pag2.jsp">Saldo</a></li>
-                <li class="txt_menu"><a href="index.jsp">Sair</a></li>
-            </ul>
-        </div>
-    </div>
+    <div id="header"></div>
 
 
     <p class="saldo"><b>Depósito:</b></p>
@@ -38,8 +24,6 @@
 
        <label for="value" class="txt_cad" >Digite o valor que deseja depositar:</label>
        <input class="value" id="deposito" name="deposito" type="text" placeholder="R$: 000,00" style="font-size: 70px;">
-   
-       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <button class="btn" onclick="deposito()">Realizar depósito</button>
 
@@ -61,6 +45,10 @@
             var dep = document.getElementById('deposito').value;
             alert('Você realizou um deposito no valor de: ' + dep );
         }
+        
+        $(function(){
+    		$("#header").load("../header/header.jsp"); 
+    	});
     </script>
 </body>
 </html>

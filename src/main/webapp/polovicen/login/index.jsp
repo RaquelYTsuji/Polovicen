@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
 <body style=" margin:50px 50px 150px 50px">
-    <img class="img_nome" src="polovicen.png">
+    <img class="img_nome" src="../header/polovicen.png">
 
     <div class="div">
 
