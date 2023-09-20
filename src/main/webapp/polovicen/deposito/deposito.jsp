@@ -24,7 +24,8 @@
 
        <label for="value" class="txt_cad" >Digite o valor que deseja depositar:</label>
        <input class="value" id="deposito" name="deposito" type="text" placeholder="R$: 000,00" style="font-size: 70px;">
-
+       <br><br><br><br>
+       
         <button class="btn" onclick="deposito()">Realizar depósito</button>
 
         <a href="../home/pag2.jsp" class="visu" >Visualizar o saldo atual</a>

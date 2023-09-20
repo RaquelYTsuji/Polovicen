@@ -26,6 +26,7 @@
 
        <label for="value" class="txt_cad" >Digite o valor que deseja sacar:</label>
        <input class="value" id="saque" name="saque" type="text" placeholder="R$: 000,00" style="font-size: 70px">
+       <br><br><br><br>
 
         <button class="btn" onclick="saque()">Realizar saque</button>
 
