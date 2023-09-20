@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polovičen</title>
-    <link rel="icon" type="imagem/png" href="po.polovicen.png">
+    <link rel="icon" type="imagem/png" href="../header/po.polovicen.png">
     <link rel="stylesheet" href="saque.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,10 +35,6 @@
     </form>
 
     <script>
-        function myFunction(x) {
-            x.classList.toggle("change");
-        }
-
         $(document).ready(function () {
             $('#saque').mask('R$: ##.##0,00', { reverse: true });
         });

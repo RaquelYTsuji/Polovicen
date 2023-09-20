@@ -1,10 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Header</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polovičen</title>
+    <link rel="icon" type="imagem/png" href="../header/po.polovicen.png">
+    <link rel="stylesheet" href="deposito.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
@@ -20,10 +28,16 @@
              	<li class="txt_menu"><a href="#"><%=session.getAttribute("nome")%></a></li>
              	<hr><br>
                 <li class="txt_menu"><a href="../saque/saque.jsp">Saque</a></li>
-                <li class="txt_menu"><a href="../deposito/deposito.jsp">Dep�sito</a></li>
+                <li class="txt_menu"><a href="../deposito/deposito.jsp">Depósito</a></li>
                 <li class="txt_menu"><a href="../login/index.jsp">Sair</a></li>
             </ul>
         </div>
     </div>
+    
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
 </body>
 </html>
