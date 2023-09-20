@@ -1,3 +1,4 @@
+<%@page import="usuario.Usuario"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,11 +19,14 @@
 	
 	<div id="header"></div>
 	
-	
-	<p class="saudacao"><b>Olá, <%=session.getAttribute("nome")%></b></p>
+	<% Usuario usuario = (Usuario) session.getAttribute("usuario");
+	   String nome = usuario.getNome();
+	   Double saldo = usuario.getSaldo(); %>
+	   
+	<p class="saudacao"><b>Olá, <%out.print(nome);%></b></p>
 	
     <p class="saldo"><b>Saldo Atual:</b></p>
-    <input class="value" id="saldo" name="saldo" type="text" value ="R$: <%=session.getAttribute("saldo")%>"/>
+    <input class="value" id="saldo" name="saldo" type="text" value ="R$: <%out.print(saldo);%>"/>
 
 
 

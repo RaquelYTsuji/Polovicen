@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" import="usuario.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,16 +11,10 @@
 		String nome = request.getParameter("nm");
 		String password = request.getParameter("password");
 		
-		Double saldo = 0.0;
-		Double saque = 0.0;
-		Double deposito = 0.0;
+		Usuario usuario = new Usuario(nome, password, 0.0, 0.0, 0.0);
 		
-		if (nome!=null && !nome.isEmpty() && password!=null && !password.isEmpty()) {
-			session.setAttribute("nome", nome);
-			session.setAttribute("password", password);
-			session.setAttribute("saldo", saldo);
-			session.setAttribute("saque", saque);
-			session.setAttribute("deposito", deposito);
+		if (usuario!=null) {
+			session.setAttribute("usuario", usuario);
 			
 			response.sendRedirect("../home/pag2.jsp");
 		} else {

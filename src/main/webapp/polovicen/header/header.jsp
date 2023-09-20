@@ -1,3 +1,4 @@
+<%@page import="usuario.Usuario"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -25,7 +26,9 @@
         <div class="menu-options">
             <ul>
              	<!--  <li class="txt_menu"><a href="conta.jsp">Conta</a></li> -->
-             	<li class="txt_menu"><a href="#"><%=session.getAttribute("nome")%></a></li>
+             	<% Usuario usuario = (Usuario) session.getAttribute("usuario");
+             	   String nome = usuario.getNome(); %>
+             	<li class="txt_menu"><a href="#"><%out.print(nome);%></a></li>
              	<hr><br>
                 <li class="txt_menu"><a href="../saque/saque.jsp">Saque</a></li>
                 <li class="txt_menu"><a href="../deposito/deposito.jsp">Depósito</a></li>

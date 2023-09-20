@@ -1,3 +1,4 @@
+<%@page import="usuario.Usuario"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page errorPage="../erro/erro.jsp" %>
@@ -9,21 +10,20 @@
 </head>
 <body>
 	<% 
-    	String valor = request.getParameter("saque");
+    	String saqueString = request.getParameter("saque");
+		Double saque = Double.parseDouble(saqueString);
 		
-		if (valor!=null && !valor.isEmpty()) {
-			session.setAttribute("saque", valor);
-			
-			String saqueString = (String) session.getAttribute("saque");
-			Double saque = Double.parseDouble(saqueString);
+		if (saque!=null) {
+			Usuario usuario = (Usuario) session.getAttribute("usuario");
+			usuario.setSaque(saque);
 			
 			if (saque >= 0) {
-				Double saldo = (Double) session.getAttribute("saldo");
+				Double saldo = usuario.getSaldo();
 				
 				Double conta = saldo - saque;
 				
 				if (conta >= 0){
-					session.setAttribute("saldo", conta);
+					usuario.setSaldo(conta);
 					response.sendRedirect("../home/pag2.jsp");
 				} else {
 					response.sendRedirect("../home/pag2.jsp");
