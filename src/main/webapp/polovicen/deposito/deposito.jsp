@@ -40,11 +40,10 @@
        <input class="value" id="deposito" name="deposito" type="text" placeholder="R$: 000,00" style="font-size: 70px;">
    
        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-       <br><br><br><br>
 
         <button class="btn" onclick="deposito()">Realizar depósito</button>
 
-        <a href="pag2.jsp" class="visu" >Visualizar o saldo atual</a>
+        <a href="../home/pag2.jsp" class="visu" >Visualizar o saldo atual</a>
 
     </form>
     

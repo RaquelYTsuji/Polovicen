@@ -24,17 +24,17 @@
 				
 				if (conta >= 0){
 					session.setAttribute("saldo", conta);
-					response.sendRedirect("pag2.jsp");
+					response.sendRedirect("../home/pag2.jsp");
 				} else {
-					response.sendRedirect("pag2.jsp");
+					response.sendRedirect("../home/pag2.jsp");
 				}
 				
 			} else {
-				response.sendRedirect("pag2.jsp");
+				response.sendRedirect("../home/pag2.jsp");
 			}
 			
 		} else {
-			response.sendRedirect("pag2.jsp");
+			response.sendRedirect("../home/pag2.jsp");
 		}
 	%>
 </body>

@@ -22,7 +22,7 @@
 			session.setAttribute("saque", saque);
 			session.setAttribute("deposito", deposito);
 			
-			response.sendRedirect("pag2.jsp");
+			response.sendRedirect("../home/pag2.jsp");
 		} else {
 			response.sendRedirect("index.jsp");
 		}

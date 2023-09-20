@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <img class="img_nome" src="polovicen.png" height="130px" width="350px" style="margin-left: 20px;">
+    <img class="img_nome" src="po.polovicen.png" height="130px" width="350px" style="margin-left: 20px;">
 
     <div class="container" onclick="myFunction(this)">
         <div class="bar1"></div>
@@ -44,12 +44,12 @@
 
     <div class="blue">
         <div class="saque">
-            <img src="saque.png" height="350px" width="150px" style="padding-top: 200px;">
-            <a href="saque.jsp"><button class="btn" style="margin-bottom: 150px;" >Realizar saque</button></a>
+            <img src="po.saque.png" height="350px" width="150px" style="padding-top: 200px;">
+            <a href="../saque/saque.jsp"><button class="btn" style="margin-bottom: 150px;" >Realizar saque</button></a>
         </div>
         <div class="deposito">
             <img class="deposito img" src="po.deposito.png" height="530px" width="170px" style="padding-top: 350px;">
-            <a href="deposito.jsp"><button class="btn" style="margin-bottom: 350px;" >Realizar depósito</button></a>
+            <a href="../deposito/deposito.jsp"><button class="btn" style="margin-bottom: 350px;" >Realizar depósito</button></a>
         </div>
     </div>
 

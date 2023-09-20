@@ -30,7 +30,7 @@
 
            
             <br><br>
-            <a href="pag2.html"><button class="btn">Entrar</button></a>
+            <a href="../home/pag2.jsp"><button class="btn">Entrar</button></a>
             
         </form>
         <div class="div frase">
