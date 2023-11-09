@@ -1,4 +1,4 @@
-<%@page import="usuario.Usuario"%>
+<%@page import="model.Usuario"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -20,6 +20,7 @@
 	<div id="header"></div>
 	
 	<% Usuario usuario = (Usuario) session.getAttribute("usuario");
+	
 	   String nome = usuario.getNome();
 	   Double saldo = usuario.getSaldo(); %>
 	   

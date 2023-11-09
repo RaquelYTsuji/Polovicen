@@ -1,6 +1,6 @@
-<%@page import="usuario.Usuario"%>
+<%@page import="model.Usuario"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" import="conection.*" import="model.*"%>
 <%@ page errorPage="../erro/erro.jsp" %>
 <!DOCTYPE html>
 <html>
@@ -24,6 +24,10 @@
 				
 				if (conta >= 0){
 					usuario.setSaldo(conta);
+					
+					Usuario_DAO dao = new Usuario_DAO();
+					String retorno = dao.alterar(usuario);
+					
 					response.sendRedirect("../home/pag2.jsp");
 				} else {
 					response.sendRedirect("../home/pag2.jsp");
@@ -33,8 +37,6 @@
 				response.sendRedirect("../home/pag2.jsp");
 			}
 			
-		} else {
-			response.sendRedirect("../home/pag2.jsp");
 		}
 	%>
 </body>

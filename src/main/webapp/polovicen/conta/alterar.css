@@ -1,26 +1,19 @@
-.txt_login{
+.txt_alterar{
     font-family: 'Montserrat', sans-serif;
     font-size:50px;
     color: rgb(244, 244, 244);
-    padding: 10px 0px 0px 225px;
-}
-
-.txt_bank{
-    padding: 0px 150px 30px;
-    color:#00003C;
-    font-family: 'Montserrat', sans-serif;
-    font-size:23px;
+    padding: 0px 0px 0px 300px;
 }
 
 /* Mantenha suas regras de estilo existentes aqui */
 
-.login {
+.alterar {
     /* da div azul login */
     background-color: #00003C;
-    width: 600px;
-    height: 600px;
-    margin-left: 300px;
-    border-radius: 10px 20px;
+    height: 1020px;
+    width: 800px;
+    margin-left: 500px;
+    border-radius: 20px;
     display: flex; /* Usar flex para o layout */
     flex-direction: column; /* Coluna para alinhar verticalmente */
     align-items: flex-start; /* Alinhar à esquerda */
@@ -35,7 +28,10 @@
 }
 
 #nome,
-#senha {
+#senha,
+#saldo,
+#saque,
+#deposito {
     margin-left:2px;
     margin-right: 2px;
     margin-bottom: 80px;
@@ -49,9 +45,9 @@
 }
 
 .btn{
-        margin: 20px 0px 0px 200px;
+        margin: 0px 0px 0px 310px;
         border: 2px solid black;
-        border-radius: 35px 35px 35px 35px;
+        border-radius: 35px;
         border-color: #CE9F41;
         background-color:  #00003C;
         width: 200px;
@@ -67,51 +63,8 @@
     background-color: #CE9F41;
 }
 
-
 .img_nome{
     width: auto;
     margin:10px 600px 30px;
 
-}
-
-.div{ 
-    /* da div total page1 */
-   height: 600px;
-   width: 1100;
-   display: flex;
-
-}
-
-
-.frase{
-    background-color: whitesmoke;
-    /* div da oura metade c frase e login */
-    display: inline-block;
-    margin-right: 20px;
-    width:500px;
-    height: 600px;
-    border-radius: 10px 0px 0px 20px;
-
-
-}
-
-.p_cima{
-    /* background-color: red; */
-    height:450px;
-    
-
-
-}
-
-.p_baixo{
-    /* background-color: aqua; */
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(244, 244, 244);
-    height:100px;
-
-}
-
-.img_login{
-    height: 400px;
-    width: 500px;
 }

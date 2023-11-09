@@ -22,11 +22,11 @@
             <br>
             <br>
             
-            <label for="nm" class="txt_cad" >Nome:</label>
-            <input type="text" id="nm" name="nm" style="background-color: #00003C; color: white;">
+            <label for="nome" class="txt_cad" >Nome:</label>
+            <input type="text" id="nome" name="nome" style="background-color: #00003C; color: white;">
            
-            <label for="password" class="txt_cad">Senha:</label>
-            <input type="password" id="password" name="password" style="background-color: #00003C; color: white;">
+            <label for="senha" class="txt_cad">Senha:</label>
+            <input type="password" id="senha" name="senha" style="background-color: #00003C; color: white;">
 
            
             <br><br>
