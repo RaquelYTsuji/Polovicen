@@ -10,29 +10,29 @@
 </head>
 <body>
 	<% 
-    	String depositoString = request.getParameter("deposito");
-		Double deposito = Double.parseDouble(depositoString);
+		Integer id = Integer.parseInt(request.getParameter("id"));
+		Double deposito = Double.parseDouble(request.getParameter("deposito"));
 		
-		
-		if (deposito!=null) {
-			
-			Usuario usuario = (Usuario) session.getAttribute("usuario");
+		if (deposito >= 0) {
+			Usuario_DAO dao = new Usuario_DAO();
+			Usuario usuario = dao.selecionar(id);
 			usuario.setDeposito(deposito);
 			
-			if (deposito >= 0) {
-				Double saldo = usuario.getSaldo();
+			Double saldo = usuario.getSaldo();
 				
-				Double conta = saldo + deposito;
-				usuario.setSaldo(conta);
-				
-				Usuario_DAO dao = new Usuario_DAO();
-				String retorno = dao.alterar(usuario);
-				
+			Double conta = saldo + deposito;
+			usuario.setSaldo(conta);
+
+			String retorno = dao.alterar(id, usuario);
+			
+			if(retorno.equals("sucesso")) {
+				session.setAttribute("usuario", usuario);
 				response.sendRedirect("../home/pag2.jsp");
 			} else {
-				response.sendRedirect("../home/pag2.jsp");
+				response.sendRedirect("deposito.jsp");
 			}
-			
+		} else {
+				response.sendRedirect("deposito.jsp");
 		}
 	%>
 </body>

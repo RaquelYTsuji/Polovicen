@@ -1,6 +1,6 @@
 <%@page import="java.util.Set"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="model.*"%>
 <%@ page errorPage="erro.jsp" %>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -28,6 +28,11 @@
        <input class="value" id="saque" name="saque" type="text" placeholder="R$: 000,00" style="font-size: 70px">
        <br><br><br><br>
 
+		<% Usuario usuario = (Usuario) session.getAttribute("usuario");
+           Integer id = usuario.getId();
+        %>
+        <input type="hidden" id="id" name="id" value="<%=id%>">
+        
         <button class="btn" onclick="saque()">Realizar saque</button>
 
         <a href="../home/pag2.jsp" class="visu" >Visualizar o saldo atual</a>

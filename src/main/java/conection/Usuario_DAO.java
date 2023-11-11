@@ -32,12 +32,13 @@ public class Usuario_DAO {
 			Statement stmt = (Statement)conn.getConn().createStatement();
 			ResultSet rs = stmt.executeQuery("Select * from Usuario");
 			while(rs.next()) {
-				Usuario usuario = new Usuario(
-						rs.getString("nome"),
-						rs.getString("senha"),
-						rs.getDouble("saldo"),
-						rs.getDouble("saque"),
-						rs.getDouble("deposito"));
+				Usuario usuario = new Usuario();
+				usuario.setId(rs.getInt("id"));
+				usuario.setNome(rs.getString("nome"));
+				usuario.setSenha(rs.getString("senha"));
+				usuario.setSaldo(rs.getDouble("saldo"));
+				usuario.setSaque(rs.getDouble("saque"));
+				usuario.setDeposito(rs.getDouble("deposito"));
 				usuarios.add(usuario);
 			}
 		}catch (Exception e) {
@@ -55,6 +56,7 @@ public class Usuario_DAO {
 			Statement stmt = (Statement)conn.getConn().createStatement();
 			ResultSet rs = stmt.executeQuery("Select * from Usuario where id = '"+id+"'");
 			rs.next();
+			usuario.setId(rs.getInt("id"));
 			usuario.setNome(rs.getString("nome"));
 			usuario.setSenha(rs.getString("senha"));
 			usuario.setSaldo(rs.getDouble("saldo"));
@@ -75,6 +77,7 @@ public class Usuario_DAO {
 			Statement stmt = (Statement)conn.getConn().createStatement();
 			ResultSet rs = stmt.executeQuery("Select * from Usuario where nome = '"+nome+"' and senha = '"+senha+"'");
 			rs.next();
+			usuario.setId(rs.getInt("id"));
 			usuario.setNome(rs.getString("nome"));
 			usuario.setSenha(rs.getString("senha"));
 			usuario.setSaldo(rs.getDouble("saldo"));
@@ -88,12 +91,12 @@ public class Usuario_DAO {
 		return usuario;
 	}
 	
-	public String alterar (Usuario usuario) {
+	public String alterar (Integer id, Usuario usuario) {
 		String retorno ="falha";
 		Conexao conn = new Conexao();
 		try {
 			Statement stmt = (Statement)conn.getConn().createStatement();
-			String stat="update Usuario set nome ='"+usuario.getNome()+"', password ='"+usuario.getSenha()+"', saldo ='"+usuario.getSaldo()+"', saque ='"+usuario.getSaque()+"', deposito ='"+usuario.getDeposito()+"' where id ='"+usuario.getId()+"'";
+			String stat="update Usuario set nome ='"+usuario.getNome()+"', senha ='"+usuario.getSenha()+"', saldo ='"+usuario.getSaldo()+"', saque ='"+usuario.getSaque()+"', deposito ='"+usuario.getDeposito()+"' where id ='"+id+"'";
 			stmt.execute(stat);
 			retorno ="sucesso";
 		}catch (Exception e) {

@@ -23,7 +23,8 @@ public class AlterarUsuario extends HttpServlet {
 		
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Integer id = Integer.parseInt(request.getParameter("id"));
 		String nome = request.getParameter("nome");
 		String senha = request.getParameter("senha");
 		Double saldo = Double.parseDouble(request.getParameter("saldo"));
@@ -33,11 +34,10 @@ public class AlterarUsuario extends HttpServlet {
 		Usuario usuario = new Usuario(nome, senha, saldo, saque, deposito);
 		
 		Usuario_DAO dao = new Usuario_DAO();
-		
-		String retorno = dao.alterar(usuario);
+		String retorno = dao.alterar(id, usuario);
 			
 		if(retorno.equals("sucesso")) {
-			response.sendRedirect("polovicen/home/pag2.jsp");
+			response.sendRedirect("polovicen/home/home.jsp");
 		}
 		else {
 			response.sendRedirect("polovicen/conta/alterar.jsp");

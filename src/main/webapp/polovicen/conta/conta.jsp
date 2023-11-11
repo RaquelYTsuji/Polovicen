@@ -23,10 +23,10 @@
 		
 		<% Usuario usuario = (Usuario) session.getAttribute("usuario");
 	
-	   String nome = usuario.getNome();
-	   Double saldo = usuario.getSaldo(); 
-	   Double saque = usuario.getSaque();
-	   Double deposito = usuario.getDeposito();%>
+		   String nome = usuario.getNome();
+		   Double saldo = usuario.getSaldo(); 
+		   Double saque = usuario.getSaque();
+		   Double deposito = usuario.getDeposito();%>
 	   
 		<br><br>
 	    <p class="texto">
@@ -58,6 +58,7 @@
 	    	<a href="../home/home.jsp"><button class="btn" >Sair</button></a>
 	    </div>
 	    
+	    <a href="listar.jsp" class="visu" >Lista de Usuários</a>
 	    <a href="../home/pag2.jsp" class="visu" >Voltar para a página principal</a>
 	    
 	 </div>

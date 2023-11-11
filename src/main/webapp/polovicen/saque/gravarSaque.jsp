@@ -10,33 +10,32 @@
 </head>
 <body>
 	<% 
-    	String saqueString = request.getParameter("saque");
-		Double saque = Double.parseDouble(saqueString);
-		
-		if (saque!=null) {
-			Usuario usuario = (Usuario) session.getAttribute("usuario");
+		Integer id = Integer.parseInt(request.getParameter("id"));
+		Double saque = Double.parseDouble(request.getParameter("saque"));
+	
+		if (saque >= 0) {
+			Usuario_DAO dao = new Usuario_DAO();
+			Usuario usuario = dao.selecionar(id);
 			usuario.setSaque(saque);
 			
-			if (saque >= 0) {
-				Double saldo = usuario.getSaldo();
+			Double saldo = usuario.getSaldo();
 				
-				Double conta = saldo - saque;
+			Double conta = saldo - saque;
 				
-				if (conta >= 0){
-					usuario.setSaldo(conta);
-					
-					Usuario_DAO dao = new Usuario_DAO();
-					String retorno = dao.alterar(usuario);
-					
+			if (conta >= 0){
+				usuario.setSaldo(conta);
+				
+				String retorno = dao.alterar(id, usuario);
+				
+				if(retorno.equals("sucesso")) {
+					session.setAttribute("usuario", usuario);
 					response.sendRedirect("../home/pag2.jsp");
 				} else {
-					response.sendRedirect("../home/pag2.jsp");
+					response.sendRedirect("saque.jsp");
 				}
-				
 			} else {
-				response.sendRedirect("../home/pag2.jsp");
+				response.sendRedirect("saque.jsp");
 			}
-			
 		}
 	%>
 </body>

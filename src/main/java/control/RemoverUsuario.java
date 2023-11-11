@@ -25,20 +25,15 @@ public class RemoverUsuario extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int id = Integer.parseInt(request.getParameter("id"));
+		Integer id = Integer.parseInt(request.getParameter("id"));
 		
 		Usuario_DAO dao = new Usuario_DAO();
 		String retorno = dao.remover(id);
 		if(retorno.equals("sucesso")) {
-			response.sendRedirect("Home.jsp");
+			response.sendRedirect("polovicen/home/home.jsp");
 		}
 		else {
-			PrintWriter out = response.getWriter();
-			out.print("<html>");
-			out.print("<h2> Não foi possível remover o estudante</h2>");
-			out.print("<br>");
-			out.print("<a href = 'Home.jsp'> Voltar </a>");
-			out.print("</html>");;
+			response.sendRedirect("polovicen/conta/remover.jsp");
 		}
 	}
 }
