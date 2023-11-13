@@ -10,12 +10,33 @@
 </head>
 <body>
 	<% 
-		Integer id = Integer.parseInt(request.getParameter("id"));
+	   Cookie[] cookies = request.getCookies();
+	   String login = "";
+	   String password = "";
+	   Integer id = 0;
+	      
+	   for (Cookie cookie : cookies) {
+           if (cookie.getName().equals("login")) {
+               login = cookie.getValue();
+           }
+       }
+	    
+	   for (Cookie cookie : cookies) {
+           if (cookie.getName().equals("password")) {
+        	   password = cookie.getValue();
+           }
+       }
+	   
+	    Usuario_DAO dao = new Usuario_DAO();
+	    Usuario usuario = dao.selecionarNomeSenha(login, password);
+		
+	    if (usuario.getNome() != null && usuario.getSenha() != null) {
+		    id = usuario.getId();
+	    }
+	   
 		Double saque = Double.parseDouble(request.getParameter("saque"));
 	
 		if (saque >= 0) {
-			Usuario_DAO dao = new Usuario_DAO();
-			Usuario usuario = dao.selecionar(id);
 			usuario.setSaque(saque);
 			
 			Double saldo = usuario.getSaldo();
@@ -28,7 +49,7 @@
 				String retorno = dao.alterar(id, usuario);
 				
 				if(retorno.equals("sucesso")) {
-					session.setAttribute("usuario", usuario);
+					session.setAttribute("saque", saque);
 					response.sendRedirect("../home/pag2.jsp");
 				} else {
 					response.sendRedirect("saque.jsp");

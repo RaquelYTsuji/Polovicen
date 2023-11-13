@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import conection.Usuario_DAO;
 import model.Usuario;
+import javax.servlet.http.Cookie;
 
 @WebServlet("/RemoverUsuario")
 public class RemoverUsuario extends HttpServlet {
@@ -25,9 +26,30 @@ public class RemoverUsuario extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Integer id = Integer.parseInt(request.getParameter("id"));
-		
-		Usuario_DAO dao = new Usuario_DAO();
+		Cookie[] cookies = request.getCookies();
+	 	String login = "";
+	 	String password = "";
+	 	Integer id = 0;
+	 	   
+	 	for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("login")) {
+                login = cookie.getValue();
+            }
+        }
+ 	    
+ 	   for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("password")) {
+            	password = cookie.getValue();
+            }
+        }
+ 	   
+ 	    Usuario_DAO dao = new Usuario_DAO();
+ 	    Usuario usuario = dao.selecionarNomeSenha(login, password);
+ 		
+ 	    if (usuario.getNome() != null && usuario.getSenha() != null) {
+ 		    id = usuario.getId();
+ 	    }
+
 		String retorno = dao.remover(id);
 		if(retorno.equals("sucesso")) {
 			response.sendRedirect("polovicen/home/home.jsp");

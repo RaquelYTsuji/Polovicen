@@ -1,4 +1,4 @@
-<%@page import="java.util.Set"%>
+<%@page import="java.util.Set" import="conection.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="model.*"%>
 <%@ page errorPage="erro.jsp" %>
@@ -27,11 +27,6 @@
        <label for="value" class="txt_cad" >Digite o valor que deseja sacar:</label>
        <input class="value" id="saque" name="saque" type="text" placeholder="R$: 000,00" style="font-size: 70px">
        <br><br><br><br>
-
-		<% Usuario usuario = (Usuario) session.getAttribute("usuario");
-           Integer id = usuario.getId();
-        %>
-        <input type="hidden" id="id" name="id" value="<%=id%>">
         
         <button class="btn" onclick="saque()">Realizar saque</button>
 

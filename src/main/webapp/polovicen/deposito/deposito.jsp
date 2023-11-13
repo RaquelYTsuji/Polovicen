@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="model.*"%>
+    pageEncoding="UTF-8" import="model.*" import="conection.*"%>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,11 +25,6 @@
        <label for="value" class="txt_cad" >Digite o valor que deseja depositar:</label>
        <input class="value" id="deposito" name="deposito" type="text" placeholder="R$: 000,00" style="font-size: 70px;">
        <br><br><br><br>
-       
-        <% Usuario usuario = (Usuario) session.getAttribute("usuario");
-           Integer id = usuario.getId();
-        %>
-        <input type="hidden" id="id" name="id" value="<%=id%>">
        
         <button class="btn" onclick="deposito()">Realizar depósito</button>
 

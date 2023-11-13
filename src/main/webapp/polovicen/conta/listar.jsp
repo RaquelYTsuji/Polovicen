@@ -21,10 +21,11 @@
     <img class="img_nome" src="../header/polovicen.png">
 	
 	<div class="lista">
-		<%
-		Usuario_DAO dao = new Usuario_DAO();
-		List<Usuario> usuarios = dao.listar();
-		%>
+	
+		<% 
+ 	    Usuario_DAO dao = new Usuario_DAO();
+ 	    List<Usuario> usuarios = dao.listar();
+        %>
 		
 		<h1 class="txt_listar">Lista de Usuários</h1>
 	

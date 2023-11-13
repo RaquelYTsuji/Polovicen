@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="model.*"%>
+    pageEncoding="UTF-8" import="model.*" import="conection.*"%>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,12 +17,7 @@
 	
 	<form action = "../../RemoverUsuario" method = "post" class="remover">
 		<h1 class="txt_remover">Remover</h1>
-        
-        <% Usuario usuario = (Usuario) session.getAttribute("usuario");
-           Integer id = usuario.getId();
-        %>
-        <input type="hidden" id="id" name="id" value="<%=id%>">
-           
+		
         <p class="texto"><b>Você tem certeza que deseja remover a sua conta permanentemente?</b></p>
         <button class="btn">Remover</button>
             

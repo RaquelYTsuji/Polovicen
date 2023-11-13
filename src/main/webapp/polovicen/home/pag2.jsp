@@ -1,4 +1,4 @@
-<%@page import="model.Usuario"%>
+<%@page import="model.Usuario" import="conection.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,12 +19,33 @@
 	
 	<div id="header"></div>
 	
-	<% Usuario usuario = (Usuario) session.getAttribute("usuario");
-	
-	   String nome = usuario.getNome();
-	   Double saldo = usuario.getSaldo(); %>
+	<% Cookie[] cookies = request.getCookies();
+	   String login = "";
+	   String password = "";
+	   Double saldo = 0.0;
+	      
+	   for (Cookie cookie : cookies) {
+           if (cookie.getName().equals("login")) {
+               login = cookie.getValue();
+           }
+       }
 	   
-	<p class="saudacao"><b>Olá, <%out.print(nome);%></b></p>
+	   for (Cookie cookie : cookies) {
+           if (cookie.getName().equals("password")) {
+        	   password = cookie.getValue();
+           }
+       }
+	   
+	   Usuario_DAO dao = new Usuario_DAO();
+	   Usuario usuario = dao.selecionarNomeSenha(login, password);
+		
+	   if (usuario.getNome() != null && usuario.getSenha() != null) {
+		   saldo = usuario.getSaldo();
+	   }
+	   
+	   %>
+	   
+	<p class="saudacao"><b>Olá, <%out.print(login);%></b></p>
 	
     <p class="saldo"><b>Saldo Atual:</b></p>
     <input class="value" id="saldo" name="saldo" type="text" value ="R$: <%out.print(saldo);%>"/>

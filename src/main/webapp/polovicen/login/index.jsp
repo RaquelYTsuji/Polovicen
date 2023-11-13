@@ -17,7 +17,7 @@
 
     <div class="div">
 
-        <form action = "login.jsp" method = "post" class="div login">
+        <form action = "../../Login" method = "post" class="div login">
             <h1 class="txt_login">Login</h1>
             <br>
             <br>
