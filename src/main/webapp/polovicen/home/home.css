@@ -1,0 +1,24 @@
+.img_nome{
+    width: auto;
+    margin:250px 600px 30px;
+}
+
+.btn {
+  border: 2px solid black;
+  border-radius: 35px;
+  border-color: #CE9F41;
+  background-color: #00003C;
+  width: 250px;
+  height: 75px;
+  color: white;
+  padding: 14px 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  cursor: pointer;
+  margin-bottom: 100px;
+
+}
+
+.btn:hover {
+  background-color: #CE9F41;
+}

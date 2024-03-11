@@ -1,0 +1,54 @@
+.txt_remover{
+    font-family: 'Montserrat', sans-serif;
+    font-size:50px;
+    color: rgb(244, 244, 244);
+    padding: 0px 0px 0px 300px;
+}
+
+/* Mantenha suas regras de estilo existentes aqui */
+
+.remover {
+    /* da div azul login */
+    background-color: #00003C;
+    height: 350px;
+    width: 800px;
+    margin-left: 500px;
+    border-radius: 20px;
+    display: flex; /* Usar flex para o layout */
+    flex-direction: column; /* Coluna para alinhar verticalmente */
+    align-items: flex-start; /* Alinhar à esquerda */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.texto {
+  text-align: left;
+  margin-left: 70px;
+  color: rgb(244, 244, 244);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  
+}
+
+.btn{
+        margin: 10px 0px 0px 70px;
+        border: 2px solid black;
+        border-radius: 35px;
+        border-color: #CE9F41;
+        background-color:  #00003C;
+        width: 200px;
+        height: 60px;
+        color: white;
+        padding: 14px 28px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #CE9F41;
+}
+
+.img_nome{
+    width: auto;
+    margin:10px 600px 30px;
+}

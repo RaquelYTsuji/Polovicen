@@ -1,102 +1,14 @@
-* { 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+.img_nome{
+    margin:10px 700px 30px;
 }
-
-
-.img_nome {
-  margin: 10px 700px 30px;
-
-}
-
-
-/* texto */
-.saldo {
-  text-align: center;
-  padding: 0px 550px;
-  color: #CE9F41;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
-
-}
-
-
-
-/* div do valor */
-
-
-.value {
- 
-  margin-left: 450px;
-  border: 5px solid #CE9F41;
-  border-radius: 170px;
-  width: 600px; /* Reduzi a largura para ajustar melhor ao layout */
-  height: 200px; /* Reduzi a altura para ajustar melhor ao layout */
-  color:#CE9F41;
-  padding: 10px; /* Reduzi o espaçamento interno para melhor formatação */
-  font-family: 'Montserrat', sans-serif;
-  font-size: 40px; /* Reduzi o tamanho da fonte para melhor ajuste */
-  cursor: pointer;
-  text-align: center;
-
-}
-
-
-.blue {
-  display: flex;
-  margin-top: 70px;
-  background-color: #00003C;
-  height: 350px;
-  width: 100%;
-  align-items: center;
-  /* Alinhar verticalmente no centro */
-  justify-content: space-around;
-  /* Espaço igual entre os elementos */
-}
-
-/* .saque,
-.deposito {
-  display: flex;
-  flex-direction: column;/* Para empilhar os elementos verticalmente */
-  /* align-items: center; */
-  /* justify-content: center; Alinhar horizontalmente no centro */
-  /* flex-direction: column; */
-  /* text-align: center; Centralizar o texto */
- 
-
-
-
-.btn {
-  border: 2px solid black;
-  border-radius: 35px 35px 35px 35px;
-  border-color: #CE9F41;
-  background-color: #00003C;
-  width: 200px;
-  height: 60px;
-  color: white;
-  padding: 14px 28px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
- margin-left: 100px;
- margin-bottom: 100px;
-
-}
-
-.btn:hover {
-  background-color: #CE9F41;
-}
-
 
 /* menu */
 .container {
   display: inline-block;
   cursor: pointer;
   margin-bottom: 80px;
-  margin-left: 150px;
+  margin-left: 650px;
 }
 
 .bar1,

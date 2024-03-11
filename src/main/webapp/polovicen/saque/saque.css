@@ -1,7 +1,3 @@
-.img_nome{
-    margin:10px 700px 30px;
-}
-
 
 /* texto */
 .saldo{
@@ -33,7 +29,7 @@
     border-radius: 170px 170px 170px 170px;
     width: 700px;
     height: 180px;
-    color: white;
+    color: #CE9F41;
     padding: 14px 28px;
     font-family: 'Montserrat', sans-serif;
     font-size: 100px;
@@ -51,7 +47,7 @@
   background-color: #00003C;
   width: 250px;
   height: 60px;
-  color:#CE9F41;
+  color: #CE9F41;
   padding: 14px 28px;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
@@ -74,7 +70,7 @@
     padding-bottom: 50px;
 }
 
-#dinheiro {
+#saque {
     margin-left:2px;
     margin-right: 2px;
     width: 60%; /* Ocupar a largura total da div login */
@@ -92,88 +88,4 @@
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-}
-
-
-/* menu */
-.container {
-    display: inline-block;
-    cursor: pointer;
-    margin-bottom: 80px;
-    margin-left:150px;
-  }
-  
-  .bar1, .bar2, .bar3 {
-    width: 70px;
-    height: 6px;
-    background-color:#CE9F41;
-    margin: 6px 0 0px 30px;
-    transition: 0.4s;
-  }
-  
-  /* Rotate first bar */
-  .change .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
-  }
-  
-  /* Fade out the second bar */
-  .change .bar2 {opacity: 0;}
-  
-  /* Rotate last bar */
-  .change .bar3 {
-    transform: translate(0, -11px) rotate(45deg);
-  }
-
-  
-.menu-options {
-  position: absolute;
-  top: 150px; /* Ajuste a posição vertical conforme necessário */
-  right: 10px; /* Ajuste a posição horizontal conforme necessário */
-  background-color:#00003C;
-  padding: 10px;
-  border-radius: 5px;
-  width: 0; /* Inicialmente, a largura é zero (fechada) */
-  height: 50%; /* A altura ocupa metade da altura da página */
-  overflow-x: hidden;
-  transition: 0.5s; /* Adicione uma transição suave para animação */
-  z-index: 1; /* Certifique-se de que a barra do menu esteja acima do conteúdo */
-  display: none;
-}
-
-.container.change .menu-options {
-  width: 15%; /* Define a largura desejada ao abrir (100% da página) */
-  height: 30%;
-}
-
-.txt_menu{
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;  
-  font-size: 20px;
-}
-
-
-.menu-options ul {
-  list-style: none;
-  padding: 0;
-  text-align: center; /* Alinhe o texto ao centro horizontalmente */
-}
-
-.menu-options ul li {
-  margin-bottom: 10px;
-}
-
-.menu-options ul li a {
-  display: block;
-  color: #CE9F41;
-
-  padding: 10px; /* Adicione um espaçamento interno para melhor formatação */
-}
-
-.menu-options ul li a:hover {
-  background-color: #00003C;
-  color: white;
-}
-
-.container.change .menu-options {
-  display: block; /* Mostrar o menu quando o ícone do menu é clicado */
 }
